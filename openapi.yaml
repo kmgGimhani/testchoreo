@@ -1,0 +1,30 @@
+openapi: 3.0.3
+info:
+  title: News List - Nodejs REST API Service
+  description: >-
+    This is a sample API specification for a simple reading list application with in-memory cache
+    written in Nodejs
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+tags:
+  - name: news
+    description: In-memory news list cache API
+paths:
+  /search:
+    summary: Search news
+    get:
+      summary: Search news
+      operationId: ListAllBooks
+      tags:
+        - news
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StringArray"
