@@ -14,11 +14,11 @@ tags:
   - name: news
     description: In-memory news list cache API
 paths:
-  /search:
-    summary: Search news
+  /:
+    summary: get news
     get:
-      summary: Search news
-      operationId: ListAllBooks
+      summary: get news
+      operationId: ListAllNews
       tags:
         - news
       responses:
